@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0e13">
+  <meta name="description" content="LFINANCE — seu controle financeiro simples, bonito e privado.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LFINANCE">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>LFINANCE — Controle financeiro</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="LFINANCE início"><span class="brand-mark">L</span><span>LFINANCE</span></a>
+      <button class="avatar" id="profileShortcut" aria-label="Abrir configurações">L</button>
+    </header>
+    <main id="view"></main>
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <button class="nav-item active" data-view="inicio"><span>⌂</span>Início</button>
+      <button class="nav-item" data-view="lancamentos"><span>⇄</span>Lançamentos</button>
+      <button class="nav-add" id="quickAdd" aria-label="Adicionar lançamento">＋</button>
+      <button class="nav-item" data-view="cartoes"><span>▤</span>Cartões</button>
+      <button class="nav-item" data-view="ajustes"><span>⚙</span>Ajustes</button>
+    </nav>
+  </div>
+  <dialog id="entryDialog" class="dialog"><form id="entryForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">NOVO REGISTRO</p><h2 id="entryTitle">Novo lançamento</h2></div><button class="icon-button" value="cancel" aria-label="Fechar">×</button></div>
+    <input type="hidden" name="id"><div class="type-switch"><button type="button" data-type="expense" class="selected">Despesa</button><button type="button" data-type="income">Receita</button><button type="button" data-type="card">No cartão</button></div>
+    <label>Descrição<input name="description" required placeholder="Ex.: Mercado da semana"></label>
+    <div class="form-row"><label>Valor<input name="amount" required type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="0,00"></label><label>Data<input name="date" required type="date"></label></div>
+    <div class="form-row"><label>Categoria<select name="category"></select></label><label>Pagamento<select name="payment"><option>Pix</option><option>Débito</option><option>Dinheiro</option><option>Transferência</option><option>Crédito</option></select></label></div>
+    <div class="form-row card-fields hidden"><label>Cartão<select name="cardId"></select></label><label>Parcelas<input name="installments" type="number" min="1" max="48" value="1"></label></div>
+    <button class="button primary full" type="submit">Salvar lançamento</button>
+  </form></dialog>
+  <dialog id="cardDialog" class="dialog"><form id="cardForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">SEU CRÉDITO</p><h2>Novo cartão</h2></div><button class="icon-button" value="cancel" aria-label="Fechar">×</button></div><label>Nome do cartão<input name="name" required placeholder="Ex.: Cartão principal"></label><div class="form-row"><label>Limite total<input name="limit" type="number" min="0" step="0.01" required placeholder="0,00"></label><label>Dia de fechamento<input name="closingDay" type="number" min="1" max="31" value="25"></label></div><button class="button primary full">Adicionar cartão</button></form></dialog>
+  <dialog id="voiceDialog" class="dialog voice-dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">LANÇAMENTO RÁPIDO</p><h2>Fale com o LFINANCE</h2></div><button class="icon-button" value="cancel" aria-label="Fechar">×</button></div><p class="muted">Experimente: “gastei 85 reais no mercado” ou “recebi 2900 reais de salário”.</p><button type="button" class="voice-button" id="startVoice">🎙️ <span>Toque para falar</span></button><p id="voiceResult" class="voice-result" aria-live="polite"></p><label>Ou escreva sua frase<input id="voiceText" placeholder="Ex.: gastei 42 reais na farmácia"></label><button type="button" class="button primary full" id="parseVoice">Interpretar frase</button></form></dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
