@@ -30,3 +30,14 @@ Para instalação no iPhone, abra o endereço no Safari, use **Compartilhar → 
 ## Dados e privacidade
 
 Os dados persistem no navegador deste dispositivo. Limpar os dados do site remove os registros locais; use **Ajustes → Exportar dados** para guardar um backup. A importação substitui o conjunto atual de dados.
+
+
+## Módulos Finanças + Academia
+
+A tela **Hoje** reúne um resumo financeiro e os treinos recentes. **Finanças** mantém lançamentos, cartões, parcelas e gráficos; **Academia** permite registrar sessões com exercício, séries, repetições, carga e duração. O **Assistente** interpreta frases de gasto/receita já existentes e prepara um registro de treino para revisão antes de salvar.
+
+Os dados novos são salvos localmente junto aos dados financeiros. Na primeira abertura da versão unificada, os dados da chave antiga `lfinance-data-v1` são copiados para `lfinance-data-v2`; a chave antiga permanece intacta como cópia de segurança. Exportações JSON incluem os treinos também.
+
+### WhatsApp
+
+A tela mostra o estado de preparação da integração. Receber mensagens, áudios e fotos pelo WhatsApp requer um servidor HTTPS, configuração de webhook e credenciais da API oficial da Meta. Segredos de API não devem ser incluídos no JavaScript público do GitHub Pages. A interface não indica a conexão como ativa até esse serviço ser configurado.
