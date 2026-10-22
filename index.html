@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="LFINANCE — entenda seus gastos, organize suas escolhas e acompanhe seu dinheiro.">
+  <meta name="description" content="LFINANCE — organize suas finanças e acompanhe seus treinos em um só lugar.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="LFINANCE">
@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <title>LFINANCE — Controle financeiro</title>
+  <title>LFINANCE — Finanças e academia</title>
 </head>
 <body>
   <div class="app-shell">
@@ -22,11 +22,11 @@
     </header>
     <main id="view"></main>
     <nav class="bottom-nav" aria-label="Navegação principal">
-      <button class="nav-item active" data-view="inicio"><span>⌂</span>Início</button>
-      <button class="nav-item" data-view="lancamentos"><span>⇄</span>Lançamentos</button>
-      <button class="nav-add" id="quickAdd" aria-label="Adicionar lançamento">＋</button>
-      <button class="nav-item" data-view="cartoes"><span>▤</span>Cartões</button>
-      <button class="nav-item" data-view="ajustes"><span>⚙</span>Ajustes</button>
+      <button class="nav-item active" data-view="inicio"><span>⌂</span>Hoje</button>
+      <button class="nav-item" data-view="financeiro"><span>⇄</span>Finanças</button>
+      <button class="nav-add" id="quickAdd" aria-label="Adicionar lançamento financeiro">＋</button>
+      <button class="nav-item" data-view="academia"><span>♢</span>Academia</button>
+      <button class="nav-item" data-view="assistente"><span>✦</span>Assistente</button>
     </nav>
   </div>
   <dialog id="entryDialog" class="dialog"><form id="entryForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">NOVO REGISTRO</p><h2 id="entryTitle">Novo lançamento</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div>
@@ -39,6 +39,7 @@
   </form></dialog>
   <dialog id="cardDialog" class="dialog"><form id="cardForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">SEU CRÉDITO</p><h2>Novo cartão</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><label>Nome do cartão<input name="name" required placeholder="Ex.: Cartão principal"></label><div class="form-row"><label>Limite total<input name="limit" type="number" min="0" step="0.01" required placeholder="0,00"></label><label>Dia de fechamento<input name="closingDay" type="number" min="1" max="31" value="25"></label></div><button class="button primary full">Adicionar cartão</button></form></dialog>
   <dialog id="voiceDialog" class="dialog voice-dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">LANÇAMENTO RÁPIDO</p><h2>Fale com o LFINANCE</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><p class="muted">Experimente: “gastei 85 reais no mercado” ou “recebi 2900 reais de salário”.</p><button type="button" class="voice-button" id="startVoice">🎙️ <span>Toque para falar</span></button><p id="voiceResult" class="voice-result" aria-live="polite"></p><label>Ou escreva sua frase<input id="voiceText" placeholder="Ex.: gastei 42 reais na farmácia"></label><button type="button" class="button primary full" id="parseVoice">Interpretar frase</button></form></dialog>
+  <dialog id="workoutDialog" class="dialog"><form id="workoutForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">ACADEMIA</p><h2>Registrar treino</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><label>Nome da sessão<input name="title" maxlength="50" placeholder="Ex.: Treino A — Peito"></label><label>Exercício<input name="exercise" required maxlength="80" placeholder="Ex.: Supino reto"></label><div class="form-row"><label>Séries<input name="sets" type="number" min="1" max="99" value="3"></label><label>Repetições<input name="reps" type="number" min="1" max="999" value="10"></label></div><div class="form-row"><label>Carga (kg)<input name="load" type="number" min="0" step="0.5" inputmode="decimal" placeholder="0"></label><label>Duração (min)<input name="duration" type="number" min="0" max="999" placeholder="Opcional"></label></div><label>Data<input name="date" type="date" required></label><button class="button primary full" type="submit">Salvar treino</button></form></dialog>
   <div id="toast" class="toast" role="status"></div>
   <script src="app.js" defer></script>
 </body>
