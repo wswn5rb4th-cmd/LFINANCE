@@ -210,3 +210,65 @@ body {
     translate: -50% -50%;
   }
 }
+
+
+/* Align all bottom navigation items on a consistent seven-column grid. */
+.bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  justify-items: stretch;
+  align-items: center;
+  gap: 0;
+}
+.bottom-nav .nav-item {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  flex: none;
+  align-content: center;
+  justify-items: center;
+  align-self: stretch;
+  padding: 4px 0;
+  margin: 0;
+  line-height: 1.2;
+}
+.bottom-nav .nav-item span {
+  display: block;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+}
+.bottom-nav .nav-add {
+  position: relative;
+  left: auto;
+  top: auto;
+  translate: none;
+  grid-column: 3 / 6;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+}
+@media (max-width: 560px) {
+  .bottom-nav {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0;
+  }
+  .bottom-nav .nav-item {
+    width: 100%;
+    min-width: 0;
+    padding: 3px 0;
+    font-size: 8px;
+  }
+  .bottom-nav .nav-item span {
+    height: 19px;
+    line-height: 19px;
+    font-size: 17px;
+  }
+  .bottom-nav .nav-add {
+    grid-column: 3 / 6;
+    width: 44px;
+    height: 44px;
+    translate: none;
+    justify-self: center;
+  }
+}
