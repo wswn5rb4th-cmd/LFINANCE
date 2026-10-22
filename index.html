@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261022b">
+  <link rel="stylesheet" href="styles.css?v=20261022c">
   <title>LFINANCE — Finanças e academia</title>
 </head>
 <body>
@@ -26,6 +26,8 @@
       <button class="nav-item" data-view="financeiro"><span>⇄</span>Finanças</button>
       <button class="nav-add" id="quickAdd" aria-label="Adicionar lançamento financeiro">＋</button>
       <button class="nav-item" data-view="academia"><span>♢</span>Academia</button>
+      <button class="nav-item" data-view="habitos"><span>✓</span>Hábitos</button>
+      <button class="nav-item" data-view="metas"><span>◎</span>Metas</button>
       <button class="nav-item" data-view="assistente"><span>✦</span>Assistente</button>
     </nav>
   </div>
@@ -40,8 +42,10 @@
   <dialog id="cardDialog" class="dialog"><form id="cardForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">SEU CRÉDITO</p><h2>Novo cartão</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><label>Nome do cartão<input name="name" required placeholder="Ex.: Cartão principal"></label><div class="form-row"><label>Limite total<input name="limit" type="number" min="0" step="0.01" required placeholder="0,00"></label><label>Dia de fechamento<input name="closingDay" type="number" min="1" max="31" value="25"></label></div><button class="button primary full">Adicionar cartão</button></form></dialog>
   <dialog id="voiceDialog" class="dialog voice-dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">LANÇAMENTO RÁPIDO</p><h2>Fale com o LFINANCE</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><p class="muted">Experimente: “gastei 85 reais no mercado” ou “recebi 2900 reais de salário”.</p><button type="button" class="voice-button" id="startVoice">🎙️ <span>Toque para falar</span></button><p id="voiceResult" class="voice-result" aria-live="polite"></p><label>Ou escreva sua frase<input id="voiceText" placeholder="Ex.: gastei 42 reais na farmácia"></label><button type="button" class="button primary full" id="parseVoice">Interpretar frase</button></form></dialog>
   <dialog id="workoutDialog" class="dialog"><form id="workoutForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">ACADEMIA</p><h2>Registrar treino</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><label>Nome da sessão<input name="title" maxlength="50" placeholder="Ex.: Treino A — Peito"></label><label>Exercício<input name="exercise" required maxlength="80" placeholder="Ex.: Supino reto"></label><div class="form-row"><label>Séries<input name="sets" type="number" min="1" max="99" value="3"></label><label>Repetições<input name="reps" type="number" min="1" max="999" value="10"></label></div><div class="form-row"><label>Carga (kg)<input name="load" type="number" min="0" step="0.5" inputmode="decimal" placeholder="0"></label><label>Duração (min)<input name="duration" type="number" min="0" max="999" placeholder="Opcional"></label></div><label>Data<input name="date" type="date" required></label><button class="button primary full" type="submit">Salvar treino</button></form></dialog>
+  <dialog id="habitDialog" class="dialog"><form id="habitForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">ROTINA</p><h2 id="habitDialogTitle">Novo hábito</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><input type="hidden" name="id"><label>Nome do hábito<input name="title" required maxlength="60" placeholder="Ex.: Beber 2 litros de água"></label><label>Meta semanal<select name="frequency"><option value="1">1 vez por semana</option><option value="2">2 vezes por semana</option><option value="3">3 vezes por semana</option><option value="4">4 vezes por semana</option><option value="5">5 vezes por semana</option><option value="6">6 vezes por semana</option><option value="7" selected>Todos os dias</option></select></label><button class="button primary full" type="submit">Salvar hábito</button></form></dialog>
+  <dialog id="goalDialog" class="dialog"><form id="goalForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">OBJETIVO PESSOAL</p><h2 id="goalDialogTitle">Nova meta</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><input type="hidden" name="id"><label>Nome da meta<input name="title" required maxlength="60" placeholder="Ex.: Guardar para uma viagem"></label><div class="form-row"><label>Objetivo<input name="target" required type="number" min="0.01" step="any" placeholder="Ex.: 5000"></label><label>Unidade<input name="unit" required maxlength="16" value="unidades" placeholder="R$, kg, páginas"></label></div><div class="form-row"><label>Progresso atual<input name="current" type="number" min="0" step="any" value="0"></label><label>Prazo<input name="deadline" type="date"></label></div><button class="button primary full" type="submit">Salvar meta</button></form></dialog>
   <div id="toast" class="toast" role="status"></div>
-  <script src="app.js?v=20261022b" defer></script>
+  <script src="app.js?v=20261022c" defer></script>
 </body>
 </html>
 
