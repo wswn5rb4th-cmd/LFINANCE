@@ -23,20 +23,26 @@ Para instalação no iPhone, abra o endereço no Safari, use **Compartilhar → 
 - Resumo de saldo, receitas, despesas, fatura, gráfico mensal e gastos por categoria.
 - Lançamentos editáveis e removíveis, com receita, despesa e compra no cartão.
 - Cartões com limite, fatura calculada pelas compras registradas e parcelas futuras.
+- Hábitos recorrentes com check-in diário, calendário semanal, metas de frequência e sequências.
+- Metas pessoais com prazo, progresso atualizável, percentual concluído e registro de conquistas.
 - Entrada por fala ou frase digitada em português.
 - Preferências de nome e moeda, categorias editáveis, cartões, exportação/importação JSON e limpeza de dados.
 - Manifesto PWA, ícones SVG, service worker e layout responsivo com áreas seguras do iPhone.
 
 ## Dados e privacidade
 
-Os dados persistem no navegador deste dispositivo. Limpar os dados do site remove os registros locais; use **Ajustes → Exportar dados** para guardar um backup. A importação substitui o conjunto atual de dados.
+Os dados persistem no navegador deste dispositivo. Hábitos, check-ins e metas são incluídos no armazenamento local e nos backups JSON. Limpar os dados do site remove os registros locais; use **Ajustes → Exportar dados** para guardar um backup. A importação substitui o conjunto atual de dados.
 
 
 ## Módulos Finanças + Academia
 
 A tela **Hoje** reúne um resumo financeiro e os treinos recentes. **Finanças** mantém lançamentos, cartões, parcelas e gráficos; **Academia** permite registrar sessões com exercício, séries, repetições, carga e duração. O **Assistente** interpreta frases de gasto/receita já existentes e prepara um registro de treino para revisão antes de salvar.
 
-Os dados novos são salvos localmente junto aos dados financeiros. Na primeira abertura da versão unificada, os dados da chave antiga `lfinance-data-v1` são copiados para `lfinance-data-v2`; a chave antiga permanece intacta como cópia de segurança. Exportações JSON incluem os treinos também.
+Os dados novos são salvos localmente junto aos dados financeiros. Na primeira abertura da versão unificada, os dados da chave antiga `lfinance-data-v1` são copiados para `lfinance-data-v2`; a chave antiga permanece intacta como cópia de segurança. Exportações JSON incluem treinos, metas, hábitos e check-ins.
+
+### Metas e Hábitos
+
+Os módulos permitem criar, editar e excluir metas pessoais, acompanhar percentuais e atualizar o progresso. Hábitos têm frequência semanal configurável, check-in diário, calendário semanal e sequência de dias. Para exclusões, o app pede confirmação.
 
 ### WhatsApp
 
