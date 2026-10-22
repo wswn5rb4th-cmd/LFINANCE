@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261022">
   <title>LFINANCE — Finanças e academia</title>
 </head>
 <body>
@@ -41,7 +41,7 @@
   <dialog id="voiceDialog" class="dialog voice-dialog"><form method="dialog"><div class="dialog-head"><div><p class="eyebrow">LANÇAMENTO RÁPIDO</p><h2>Fale com o LFINANCE</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><p class="muted">Experimente: “gastei 85 reais no mercado” ou “recebi 2900 reais de salário”.</p><button type="button" class="voice-button" id="startVoice">🎙️ <span>Toque para falar</span></button><p id="voiceResult" class="voice-result" aria-live="polite"></p><label>Ou escreva sua frase<input id="voiceText" placeholder="Ex.: gastei 42 reais na farmácia"></label><button type="button" class="button primary full" id="parseVoice">Interpretar frase</button></form></dialog>
   <dialog id="workoutDialog" class="dialog"><form id="workoutForm" method="dialog"><div class="dialog-head"><div><p class="eyebrow">ACADEMIA</p><h2>Registrar treino</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Fechar">×</button></div><label>Nome da sessão<input name="title" maxlength="50" placeholder="Ex.: Treino A — Peito"></label><label>Exercício<input name="exercise" required maxlength="80" placeholder="Ex.: Supino reto"></label><div class="form-row"><label>Séries<input name="sets" type="number" min="1" max="99" value="3"></label><label>Repetições<input name="reps" type="number" min="1" max="999" value="10"></label></div><div class="form-row"><label>Carga (kg)<input name="load" type="number" min="0" step="0.5" inputmode="decimal" placeholder="0"></label><label>Duração (min)<input name="duration" type="number" min="0" max="999" placeholder="Opcional"></label></div><label>Data<input name="date" type="date" required></label><button class="button primary full" type="submit">Salvar treino</button></form></dialog>
   <div id="toast" class="toast" role="status"></div>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20261022" defer></script>
 </body>
 </html>
 
