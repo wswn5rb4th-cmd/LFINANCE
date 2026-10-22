@@ -66,3 +66,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 @media(max-width:560px){.app-shell{padding-right:14px;padding-left:14px}.topbar{height:68px}.welcome{align-items:flex-start;gap:10px}.welcome .muted{max-width:230px}.month-pill{flex:none;padding:9px 10px;font-size:10px}.quick-panel{margin-top:12px;padding:18px 15px;border-radius:18px}.quick-actions{grid-template-columns:1fr;gap:7px}.quick-action{grid-template-columns:36px 1fr 14px;padding:10px}.quick-action strong{font-size:12px}.quick-action small{font-size:10px}.overview{gap:9px}.metric-card{min-height:122px}.content-grid{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
+/* Keep the compact brand and profile controls available while scrolling. */
+.topbar{position:sticky;top:0;z-index:6;height:calc(58px + env(safe-area-inset-top));margin:0 -28px;padding:env(safe-area-inset-top) 28px 0;background:rgba(11,10,14,.88);border-bottom:1px solid #ffffff0b;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.brand-mark{background:#050505;color:#fff;box-shadow:0 0 0 1px #ffffff24;border:1px solid #ffffff38;border-radius:9px;width:28px;height:28px;font-size:18px}
+.avatar{background:#050505;color:#fff;border-color:#ffffff4a;width:36px;height:36px}
+.welcome{margin-top:17px}
+@media(max-width:680px){.topbar{height:calc(54px + env(safe-area-inset-top));margin:0 -16px;padding:env(safe-area-inset-top) 16px 0}}
+@media(max-width:560px){.topbar{margin:0 -14px;padding-right:14px;padding-left:14px}}
+
