@@ -104,3 +104,37 @@ html{touch-action:manipulation}
   .bottom-nav{height:70px;padding-top:6px}
   .nav-add{width:44px;height:44px}
 }
+/* LFINANCE: combined finance and workout modules. */
+.workout-highlight{display:grid;gap:6px;padding:14px;border:1px solid #3a3029;border-radius:14px;background:linear-gradient(140deg,#211c17,#19161a)}
+.workout-highlight strong{font:700 14px Manrope}
+.workout-highlight span,.workout-highlight small{font-size:11px;color:var(--muted)}
+.workout-list{display:grid}
+.workout-row{display:grid;grid-template-columns:38px minmax(0,1fr) 30px;align-items:center;gap:11px;padding:12px 0;border-top:1px solid #2b252e}
+.workout-row:first-child{border-top:0}
+.workout-row-icon,.assistant-icon,.whatsapp-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:#2a2119;color:#ffad59}
+.workout-row-main{display:grid;gap:4px;min-width:0}
+.workout-row-main strong{font-size:12px}
+.workout-row-main span,.workout-row-main small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;color:var(--muted)}
+.assistant-card{padding:20px;border:1px solid #3a3029;border-radius:20px;background:radial-gradient(ellipse at top right,#4b301d33,transparent 50%),linear-gradient(145deg,#1b1818,#141218)}
+.assistant-heading{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+.assistant-heading h2{font:700 16px Manrope;margin:1px 0 5px}
+.assistant-heading p,.assistant-card small{font-size:11px;color:var(--muted);line-height:1.5;margin:0}
+.assistant-icon{flex:none;background:#302216}
+.assistant-card label{display:block;font-size:11px;color:var(--muted);margin-bottom:7px}
+.assistant-card textarea{width:100%;resize:vertical;min-height:86px;padding:13px;border:1px solid #39313a;border-radius:13px;background:#0f0d11;color:var(--text);font:16px 'DM Sans',sans-serif;outline:none}
+.assistant-card textarea:focus{border-color:#bc7543;box-shadow:0 0 0 3px #ed79531c}
+.assistant-actions{display:flex;justify-content:space-between;gap:10px;margin:10px 0}
+.whatsapp-panel{display:flex;align-items:center;gap:12px;margin-top:14px;padding:15px;border:1px solid #174a36;border-radius:16px;background:linear-gradient(110deg,#0f1b17,#141218)}
+.whatsapp-panel>div:nth-child(2){flex:1;min-width:0}
+.whatsapp-panel strong{font-size:12px}
+.whatsapp-panel p{margin:5px 0;font-size:11px;color:#b5c0b9;line-height:1.45}
+.whatsapp-panel small{font-size:9px;color:#899a91;line-height:1.45}
+.whatsapp-icon{flex:none;color:#22c878;background:#102f22;font-size:18px}
+.status-pending{padding:6px 8px;border:1px solid #51402e;border-radius:20px;color:#e4b16c;font-size:9px;white-space:nowrap}
+.workout-stats{margin-bottom:14px}
+@media(max-width:560px){
+  .assistant-card{padding:15px}
+  .whatsapp-panel{align-items:flex-start;flex-wrap:wrap;padding:13px}
+  .whatsapp-panel .button,.status-pending{margin-left:48px}
+  .workout-row{gap:8px}
+}
