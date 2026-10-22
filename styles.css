@@ -272,3 +272,14 @@ body {
     justify-self: center;
   }
 }
+
+
+/* Explicitly place every navigation item so none wraps to a second row. */
+.bottom-nav .nav-item[data-view="academia"] { grid-column: 1; grid-row: 1; }
+.bottom-nav .nav-item[data-view="assistente"] { grid-column: 2; grid-row: 1; }
+.bottom-nav .nav-item[data-view="financeiro"] { grid-column: 3; grid-row: 1; }
+.bottom-nav .nav-add { grid-column: 4; grid-row: 1; }
+.bottom-nav .nav-item[data-view="habitos"] { grid-column: 5; grid-row: 1; }
+.bottom-nav .nav-item[data-view="inicio"] { grid-column: 6; grid-row: 1; }
+.bottom-nav .nav-item[data-view="metas"] { grid-column: 7; grid-row: 1; }
+.bottom-nav { grid-template-rows: minmax(0, 1fr); }
