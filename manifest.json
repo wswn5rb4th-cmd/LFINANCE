@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "LFINANCE — Controle financeiro",
+  "name": "LFINANCE — Finanças e academia",
   "short_name": "LFINANCE",
-  "description": "Entenda seus gastos, organize suas escolhas e acompanhe seu dinheiro.",
+  "description": "Organize suas finanças e acompanhe seus treinos em um só lugar.",
   "lang": "pt-BR",
   "start_url": "./",
   "scope": "./",
