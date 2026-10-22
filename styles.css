@@ -14,7 +14,7 @@ body{background:radial-gradient(ellipse at 12% 0%,#3a1b1f66 0,transparent 34rem)
 .eyebrow{color:#c9a5aa}
 .welcome{margin-top:28px}
 .welcome h1{letter-spacing:-.8px}
-.month-pill{display:flex;align-items:center;gap:8px;border-color:#3d3036;background:#171318;color:#e1d5dd;text-transform:capitalize}
+.month-pill{display:flex;align-items:center;gap:8px;border-color:#3d3036;background:#171318;color:#e1d5dd}
 .month-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px #ff9b55a8}
 .balance-card,.metric-card,.panel,.credit-card,.setting-card{border-color:#302831;background-color:rgba(20,18,24,.93);box-shadow:0 12px 35px #00000014}
 .balance-card{background:radial-gradient(ellipse at 91% 5%,#f4765c42 0,transparent 36%),linear-gradient(130deg,#2b1c20,#1d1720 55%,#17141a);border-color:#57343b}
